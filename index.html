@@ -304,8 +304,8 @@
           analyser = audioContext.createAnalyser();
           
           // 高速でローレイテンシーな分析のための設定
-          analyser.fftSize = 256; // 小さいFFTサイズで高速化
-          analyser.smoothingTimeConstant = 0.1; // 低い値で反応を速く
+          analyser.fftSize = 32; // 小さいFFTサイズで高速化
+          analyser.smoothingTimeConstant = 0.01; // 低い値で反応を速く
           
           microphone.connect(analyser);
           
